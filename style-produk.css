@@ -1,0 +1,637 @@
+.title1 {
+  color: rgb(203, 233, 203);
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  height: 100vh;
+  background: url("../");
+  background-position: center;
+  background-size: cover;
+  background-color: rgb(198, 224, 193);
+}
+.my-table {
+  border: none;
+  font-style: bold;
+}
+.my-table th,
+td {
+  text-align: middle;
+  padding: 8px;
+}
+.my-table th {
+  background-color: #a2b18f;
+  color: rgb(241, 224, 241);
+}
+.my-table tr:hover {
+  background-color: hsl(151, 24%, 76%);
+}
+
+.button {
+  background-color: #134d33; /* Green */
+  border: none;
+  color: rgb(34, 62, 29);
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: rgb(255, 255, 255);
+  padding: 1em 2, 3em;
+  border-radius: 10px;
+  color: black;
+  border: 3px solid #0a2b02;
+}
+
+.button1:hover {
+  background-color: #053305;
+  color: white;
+}
+
+.button2 {
+  background-color: white;
+  padding: 1em 2, 3em;
+  border-radius: 20px;
+  color: black;
+  border: 3px solid #0e3602;
+}
+
+.button2:hover {
+  background-color: #074722;
+  color: white;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: right;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.price {
+  color: black;
+  font-size: 15px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 10px;
+  color: rgb(6, 79, 7);
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+}
+
+body {
+  height: 100vh;
+  background: url("../asset/coffe.webp");
+  background-position: center;
+  background-size: cover;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+}
+
+header .navbar {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.navbar .logo {
+  color: white;
+  font-size: 2.1rem;
+  font-weight: 600;
+}
+
+.navbar .logo span {
+  color: #c06b3e;
+}
+
+.navbar .menu-link {
+  display: flex;
+  gap: 40px;
+}
+
+.navbar a {
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #c06b3e;
+}
+
+/* content */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.hero-section .content {
+  color: white;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hero-section .content h1 {
+  font-size: 3rem;
+  max-width: 600px;
+}
+
+.hero-section .content p {
+  font-weight: 300;
+  margin-top: 15px;
+  max-width: 600px;
+}
+
+.hero-section .content button {
+  background: white;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 38px;
+  padding: 12px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.hero-section .content button:hover {
+  color: white;
+  background: #c06b3e;
+}
+
+/*respon*/
+#menu-btn {
+  color: white;
+  cursor: pointer;
+  text-shadow: 2px 2px 2px black;
+  display: none;
+}
+
+#close-menu-btn {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  header {
+    padding: 10px 20px;
+  }
+
+  header.show-mobile-menu::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+  }
+  #close-menu-btn,
+  #menu-btn {
+    display: block;
+  }
+
+  .navbar .menu-link {
+    position: fixed;
+    left: -260px;
+    top: 0;
+    flex-direction: column;
+    width: 260px;
+    height: 100vh;
+    background: white;
+    padding: 70px 40px 0;
+    transition: left 0.1s ease;
+  }
+
+  header.show-mobile-menu .navbar .menu-link {
+    left: 0;
+  }
+
+  .navbar a {
+    color: #000;
+    text-shadow: none;
+  }
+
+  .hero-section .content {
+    text-align: center;
+  }
+
+  .hero-section .content :is(h1, p) {
+    max-width: 100%;
+  }
+
+  .hero-section .content h1 {
+    font-size: 2.3rem;
+    line-height: 60px;
+  }
+
+  .hero-section .content button {
+    padding: 9px 18px;
+  }
+}
+.title1 {
+  color: rgb(255, 255, 255);
+}
+body {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  background-color: rgb(75, 116, 67);
+}
+.my-table {
+  border: none;
+  font-style: bold;
+}
+.my-table th,
+td {
+  text-align: middle;
+  padding: 8px;
+}
+.my-table th {
+  background-color: #223905;
+  color: rgb(241, 224, 241);
+}
+.my-table tr:hover {
+  background-color: hsl(151, 88%, 10%);
+}
+
+.button {
+  background-color: #134d33; /* Green */
+  border: none;
+  color: rgb(34, 62, 29);
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: rgb(255, 255, 255);
+  padding: 1em 2, 3em;
+  border-radius: 10px;
+  color: black;
+  border: 3px solid #0a2b02;
+}
+
+.button1:hover {
+  background-color: #053305;
+  color: white;
+}
+
+.button2 {
+  background-color: white;
+  padding: 1em 2, 3em;
+  border-radius: 20px;
+  color: black;
+  border: 3px solid #0e3602;
+}
+
+.button2:hover {
+  background-color: #074722;
+  color: white;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: right;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.price {
+  color: black;
+  font-size: 15px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 10px;
+  color: rgb(6, 79, 7);
+  background-color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: url("../asset/coffe.webp");
+  background-position: center;
+  background-size: cover;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+}
+
+header .navbar {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.navbar .logo {
+  color: white;
+  font-size: 2.1rem;
+  font-weight: 600;
+}
+
+.navbar .logo span {
+  color: #c06b3e;
+}
+
+.navbar .menu-link {
+  display: flex;
+  gap: 40px;
+}
+
+.navbar a {
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #c06b3e;
+}
+
+/* content */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.hero-section .content {
+  color: white;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hero-section .content h1 {
+  font-size: 3rem;
+  max-width: 600px;
+}
+
+.hero-section .content p {
+  font-weight: 300;
+  margin-top: 15px;
+  max-width: 600px;
+}
+
+.hero-section .content button {
+  background: white;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 38px;
+  padding: 12px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.hero-section .content button:hover {
+  color: white;
+  background: #c06b3e;
+}
+
+/*respon*/
+#menu-btn {
+  color: white;
+  cursor: pointer;
+  text-shadow: 2px 2px 2px rgb(6, 6, 6);
+  display: none;
+}
+
+#close-menu-btn {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  header {
+    padding: 10px 20px;
+  }
+
+  header.show-mobile-menu::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+  }
+  #close-menu-btn,
+  #menu-btn {
+    display: block;
+  }
+
+  .navbar .menu-link {
+    position: fixed;
+    left: -260px;
+    top: 0;
+    flex-direction: column;
+    width: 260px;
+    height: 100vh;
+    background: white;
+    padding: 70px 40px 0;
+    transition: left 0.1s ease;
+  }
+
+  header.show-mobile-menu .navbar .menu-link {
+    left: 0;
+  }
+
+  .navbar a {
+    color: #ece1e1;
+    text-shadow: none;
+  }
+
+  .hero-section .content {
+    text-align: center;
+  }
+
+  .hero-section .content :is(h1, p) {
+    max-width: 100%;
+  }
+
+  .hero-section .content h1 {
+    font-size: 2.3rem;
+    line-height: 60px;
+  }
+
+  .hero-section .content button {
+    padding: 9px 18px;
+  }
+}
+.title1 {
+  color: rgb(7, 48, 7);
+}
+body {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  background-color: rgb(75, 116, 67);
+}
+.my-table {
+  border: none;
+  font-style: bold;
+}
+.my-table th,
+td {
+  text-align: middle;
+  padding: 8px;
+}
+.my-table th {
+  background-color: #223905;
+  color: rgb(241, 224, 241);
+}
+.my-table tr:hover {
+  background-color: hsl(151, 88%, 10%);
+}
+
+.button {
+  background-color: #134d33; /* Green */
+  border: none;
+  color: rgb(34, 62, 29);
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: rgb(255, 255, 255);
+  padding: 1em 2, 3em;
+  border-radius: 10px;
+  color: black;
+  border: 3px solid #0a2b02;
+}
+
+.button1:hover {
+  background-color: #074722;
+  color: white;
+}
+
+.button2 {
+  background-color: white;
+  padding: 1em 2, 3em;
+  border-radius: 20px;
+  color: black;
+  border: 3px solid #0e3602;
+}
+
+.button2:hover {
+  background-color: #074722;
+  color: white;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: right;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.price {
+  color: black;
+  font-size: 15px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 10px;
+  color: rgb(6, 79, 7);
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
